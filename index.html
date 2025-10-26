@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flyer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family:"Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; padding-right: 10px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+h4 {font-size: x-large;}
+</style>
+</head>
+<body class="w3-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+  <a href="#main" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">MAIN</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT</a>
+  <a href="#stats" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">STATS</a>
+  <a href="#start" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">START HERE</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-wpadding-16">
+  <span class="w3-left w3-padding"><img src="Mannatech_M.jpg">Mannatech</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  
+  <!-- Photo grid -->
+  <div class="w3-row-padding16 w3-grayscale-min"  id="main">
+    <div class="w3-quarter">
+      <img src="Welcome.jpg" style="width:100%" onclick="onClick(this)" alt="Welcome">
+      <img src="Who_is_Mannatech.jpg" style="width:100%" onclick="onClick(this)" alt="Who is Mannatech">
+      <img src="Glycans.jpg" style="width:100%" onclick="onClick(this)" alt="Glycans">
+     </div>
+    
+   <div class="w3-quarter">
+      <img src="Nobel.jpg" style="width:100%" onclick="onClick(this)" alt="Cellular Level">
+      <img src="Feelgood.jpg" style="width:100%" onclick="onClick(this)" alt="Feel Good">
+      <img src="Product chart.jpg" style="width:100%" onclick="onClick(this)" alt="Product chart">
+     </div>
+    
+     <div class="w3-quarter">
+      <img src="Nutri+Wellness.jpg" style="width:100%" onclick="onClick(this)" alt="Nutrition & Wellness">
+      <img src="Fitness+Weight.jpg" style="width:100%" onclick="onClick(this)" alt="Fitness & Weight">
+      <img src="Skin+Personal.jpg" style="width:100%" onclick="onClick(this)" alt="Skin & Personal Care">
+      </div>
+    </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <img src="Mannatech_aloe.jpg" alt="Power of Aloe" class="w3-image w3-padding-32" width="600" height="650">
+    <h4>Health & Wellness</h4>
+     <!--<div class="w3-content w3-justify" style="max-width:600px">-->
+     <div class="rowpadding" style="color: darkorange;">
+      <h3>Did you know?</h3>
+    <p>Did you know that your body has the amazing <em><b>ability to regenerate, repair and heal itself</b></em> from any disease or illness if it has the right tools and functionality?</p>
+  </div>
+
+  <div class="rowpadding" style="color: darkorange;">
+    <h3>Info about health supplements</h3>
+    <p>Does your body need supplements? Why not just eat the right food? 
+       The majority of people are <em><b>deficient in essential vitamins, minerals and fatty acids.</b></em> To get the daily requirement to function optimally you need to eat +- 13 portions of a variety of the correct foods & vegetables which in most cases does not happen.</p>
+  </div>
+
+  <div class="rowpadding" style="color: darkorange;">
+    <h3>Natural vs. Synthetic</h3>
+    <p>Natural supplements (plant or animal based) are often <em><b>more bioavailable</b></em>, meaning they are easier for the body to absorb. Starting materials for strictly synthetic supplements can be anything from coal tar to petroleum to acetylene gas and mostly require higher doses to achieve the same effect.</p>
+  </div>
+
+<div class="rowpadding" style="color: darkorange;">
+    <h3>Nutrient absorption factors</h3>
+    <p>Age, medical condition, medications, lifestyle habits, food preparation methods.
+       Although they do play a role in production the use of pesticides, fertilizers, antibiotics and other chemicals also <em><b>increase the risk of food contamination</b></em> and therefor human consumption.</p>
+</div>
+
+<div class="rowpadding" style="color: darkorange;">
+    <h3>What to look for?</h3>
+    <p>Supplements that are <em><b>certified, tested for efficacy, safety, purity and actually work.</b></em>
+<br>This ensures that: 1. It contains the <em><b>ingredients as per the label.</b></em>
+		2. Contains NO additional <em><b>fillers that can be harmful.</b></em>
+		3. Claims made on packaging are supported by <em><b>scientific evidence.</b></em></p>
+    </div>
+
+    <div class="rowpadding" style="color: darkorange;">
+      <h3><a href="https://ltl.is/v3ckbhdq5">What are Glycans?</a></h3>
+      <h3><a href="https://ltl.is/h2fy7qbp4">Why Mannatech?</a></h3>
+    </div>
+            
+       <hr class="w3-opacity"  id="stats">
+       <h4 class="w3-padding-16">Some Stats</h4>
+       <div class="w3-dark-grey">
+           <p class="w3-wide">No of Countries Mannatech is Currently Trading in</p>
+              <div class="w3-container w3-padding-small w3-center w3-orange" style="width:100%">49</div>
+        </div>
+        <p class="w3-wide">International Patents Registered</p>
+           
+           <div class="w3-container w3-padding-small w3-center w3-orange" style="width:100%">135</div>
+           <p class="w3-wide">Published Studies including human double blind, placebo controlled trials</p>
+           
+           <div class="w3-container w3-padding-small w3-center w3-orange" style="width:100%">19</div>
+           
+           <p class="w3-wide">Money spent or R&D</p>
+          <div class="w3-container w3-padding-small w3-orange w3-center" style="width:100%">In Excess of US$ 50M</div>
+         
+         <p class="w3-wide">Mission 5 Million - M5M</p>
+         <div class="w3-container w3-padding-small w3-center w3-orange" style="width:100%">Millions of PhytoNutrients given daily to kids with malnutrtion</div>
+          </div>
+      
+          <h4 class="w3-padding-16" id="start">What do I need to do?</h4>
+          <div class="w3-row-padding" style="margin:0 -16px">
+          <div class="w3-half w3-margin-bottom">
+          <ul class="w3-ul w3-light-grey w3-center">
+            <li class="w3-black w3-xxlarge w3-padding-32">Start here</li>
+            <li class="w3-padding-16"><a href="https://za.mannatech.com/products/shop/?account=4590062">More info about Mannatech</a></li>
+            <li class="w3-padding-16"><a href="Product Chart.jpg">Use product chart to help you decide what you need</a></li>
+            <li class="w3-padding-16"><a href="https://za.mannatech.com/products/shop/?account=4590062">Check out products on website</a></li>
+            <li class="w3-padding-16"><a href="#contact">Contact me on any of links below if you need assistance or advice</a></li>
+            <li class="w3-padding-16">Register and manage your own account</li>
+            <li class="w3-padding-16">Place Order</li>
+            <li class="w3-padding-16">One Time Order benefits - Product itself and your Health</li>
+            <span class="w3-opacity"></span>
+            <li class="w3-light-grey w3-padding-24"><br><a href="https://za.mannatech.com/products/shop/?account=4590062">Online Shop</a></li>
+          </ul>
+        </div>
+        
+        <div class="w3-half">
+          <ul class="w3-ul w3-light-grey w3-center">
+            <li class="w3-black w3-xxlarge w3-padding-32">Info and Tips</li>
+            <li class="w3-padding-16">Preferred customer qualifies for more benefits</li>
+            <li class="w3-padding-16"><a href="https://za.mannatech.com/opportunity/a-richer-life/?account=4590062#loyalty">Subcription order earns 20% loyalty points</a></li>
+            <li class="w3-padding-16">Accumulated Loyalty points can be used after 3rd month to purchase products</li>
+            <li class="w3-padding-16">Monthly Subscription Orders can be adjusted</li>
+            <li class="w3-padding-16">90 Day money back guarantee!</li>
+            <li class="w3-padding-16">Share with others and Earn Referral bonus of 20% on first order</li>
+            <li class="w3-padding-16"><a href="https://za.mannatech.com/start/?account=4590062">Start your own business and Join as an Independent Associate</a></li>
+            <span class="w3-opacity"></span>
+             <li class="w3-light-grey w3-padding-24"><br><a href="https://za.mannatech.com/?account=4590062">Enroll Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-black w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Get in Touch</b></h4>
+									<p><b>Please contact me on any of the links or apps if you have any questions, concerns or need advice.</b></p>
+								<section>
+									<h2>Links below</h2>
+									<ul class="icon">
+										<li><a href="https://wa.me/27798892631" class="icon brands alt fa-whatsapp"><span class="label"> WhatsApp</span></a></li>
+										<li><a href="https://t.me/MTjp61" class="icon brands fa-telegram"><span class="label"> Telegram</span></a></li>
+										<li><a href="QR_logo.jpg" class="icon solid alt fa-info-circle"><span class="label"> QR</span></a></li>
+										<li><a href="https://za.mannatech.com/account/4590062/?account=4590062" class="icon solid alt fa-envelope"><span class="label"> Mannatech Website</span></a></li>
+									</ul>
+								</section>
+                </div>
+                </div>
+
+  
+  <!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
